@@ -9,3 +9,7 @@ pulumi-bucket-name:
 .PHONY: s3-ls
 s3-ls: 
 	aws s3 ls $(shell pulumi stack output bucketName)
+
+.PHONY: s3-bucket-endpoint
+s3-bucket-endpoint:
+	curl $(shell pulumi stack output bucketEndpoint)
