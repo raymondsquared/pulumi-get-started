@@ -13,3 +13,7 @@ s3-ls:
 .PHONY: s3-bucket-endpoint
 s3-bucket-endpoint:
 	curl $(shell pulumi stack output bucketEndpoint)
+
+.PHONY: pulumi-destroy
+pulumi-destroy:
+	pulumi destroy
